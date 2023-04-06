@@ -14,6 +14,8 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
@@ -37,6 +39,7 @@
         ]
     },
     "devDependencies": {
+        "gh-pages": "^5.0.0",
         "react-test-renderer": "^18.2.0"
     }
 }
