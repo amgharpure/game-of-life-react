@@ -20,11 +20,13 @@ const Board = () => {
     const speedRef = useRef(speed);
 
     const clearBoard = () => {
-        // 1. stop the simulation, 2. reset viewport and 3. Mark all cells as not alive
+        // stop the simulation
         runningRef.current = false;
         setRunning(false);
+        // reset viewport
         setTop(0);
         setLeft(0);
+        // Mark all cells as not alive
         const cells = new Set();
         aliveCellsRef.current = cells;
         updateAliveCells(cells);
@@ -48,7 +50,7 @@ const Board = () => {
 
     const updateAliveCells = (aliveCells) => {
         // Create a copy of the set of live cells and set it to the state variable
-        // this will re-render the baord
+        // this will re-render the board
         const newAliveCells = new Set(aliveCells);
         setAliveCells(newAliveCells);
     }
@@ -135,6 +137,7 @@ const Board = () => {
                                 return (
                                     <Cell
                                         key={key}
+                                        keyVal={key}
                                         isAlive={aliveCells.has(key)}
                                         onClickCallBack={() => { toggleAliveCallback(key) }}
                                     />
