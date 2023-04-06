@@ -1,5 +1,22 @@
 # Game Of Life: React App
 
+This is an implementation of John Conway's Game of Life (Ref: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+
+## Running the Simulation
+1. Clone the Repository
+2. In the repository home folder, run
+    ```
+    npm install
+    npm start
+    ```
+3. Open http://localhost:3000/ in a browser
+
+## Running the Tests
+1. In the repository home folder, run
+    ```
+    npm test
+    ```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
